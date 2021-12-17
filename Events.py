@@ -12,6 +12,7 @@ def dibujando (event,x,y,flag,param):
     #ejemplos de los difrentes eventos del mouse
     if event == cv2.EVENT_LBUTTONDOWN:
         cv2.circle(imagen,(x,y),20,(255,255,255),2)
+        cv2.putText(imagen, "presionaste el boton izquierdo",(x,y),2,1,(255,255,0),2)
 
     if event == cv2.EVENT_RBUTTONDOWN:
         cv2.circle(imagen,(x,y),20,(0,0,255),2)
@@ -41,4 +42,4 @@ while True:
         imagen = np.zeros((480,640,3),np.uint8)
     elif k == 27:
         break
-cv2.destroyAllWindows()
+cv2.destroyAllWindows() 
